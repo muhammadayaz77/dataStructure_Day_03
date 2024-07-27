@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching</title>
+</head>
+<body>
+    <input type="text" id="getData">
+    <button class="btn">Enter to Search</button><br>
+</body>
+<script>
+    let data = [23,53,10,20,30,31];
+    for(let i = 0;i<data.length;i++)
+    {
+        document.write(`${i} : ${data[i]} <br>`)
+    }
+   document.querySelector('.btn').onclick = () => {
+    let position = null;
+    let item = document.getElementById('getData').value;
+    item = parseInt(item)
+    for(let i = 0;i<data.length;i++)
+    {
+        if(data[i] === item)
+        {
+            position = i;
+            break;
+        }
+    }
+    for(let i = 0;i<data.length;i++)
+    {
+        document.write(`${i} : ${data[i]} <br>`)
+    }
+    document.write("Position : " + position);
+   }
+</script>
+</html>

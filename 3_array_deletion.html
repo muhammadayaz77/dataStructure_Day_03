@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete an Array</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button class="btn">Remove Data</button>
+    <br>
+</body>
+<script>
+    let data = [12,35,23,653,69,23]; 
+    for(let i = 0;i<data.length;i++){
+document.write(`${i} : ` + data[i] + '<br>');
+}       
+    document.querySelector('.btn').onclick = () => {
+        let position = document.getElementById('input').value;
+        position = parseInt(position)
+for(let i = position;i<data.length;i++)
+{
+    data[i] = data[i+1];
+}
+data.length = data.length - 1;
+for(let i = 0;i<data.length;i++)
+{
+document.write(`${i} : ` + data[i] + '<br>');
+}
+    }
+    
+
+
+</script>
+</html>
